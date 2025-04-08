@@ -1,3 +1,5 @@
+using System.Runtime.CompilerServices;
+
 namespace GameUnit
 {
     public class Unit
@@ -10,5 +12,19 @@ namespace GameUnit
             this.movement = movement;
             Health = health;
         }
+
+        private static void Move(string[] args)
+        {
+            /*int movement += 1;
+            //foreach(n in movement)
+            {
+                movement.Add(ToRoman());    
+            }
+            */
+
+        }
+
+
+
     }
 }

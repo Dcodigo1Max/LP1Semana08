@@ -5,7 +5,9 @@ namespace GameUnit
     public class Unit
     {
         private readonly int movement;
-        public int Health { get; set; }
+
+        //Health passou a ser virtual
+        public virtual int Health { get; set; }
 
         public Unit(int movement, int health)
         {
@@ -13,6 +15,10 @@ namespace GameUnit
             Health = health;
         }
 
+
+
+
+        //Metodo Move
         private static void Move(string[] args)
         {
             /*int movement += 1;
@@ -21,9 +27,15 @@ namespace GameUnit
                 movement.Add(ToRoman());    
             }
             */
-
         }
 
+        //Propriedade Cost
+        public class Cost
+        {
+           // public float X => 90;
+        }
+
+        
 
 
     }

@@ -19,11 +19,8 @@ namespace GameUnit
            
         }
 
-        public override float Cost()
-        {
-
-            return AttackPower + XP;
-        }
+        public override float Cost => AttackPower + XP;
+      
 
         public override int Health 
         {   

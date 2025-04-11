@@ -14,10 +14,9 @@ namespace GameUnit
         //Metodo public void
         public void Attack(Unit u, int attackPower)
         {   
-            //Unit.u=++XP;
-            XP = ++XP;
-            int dano = AttackPower + XP;
-            //return Health = Health - attackPower;
+            u.Health-=AttackPower;
+            XP++;
+           
         }
 
         public override float Cost()

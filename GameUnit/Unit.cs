@@ -2,6 +2,7 @@ using System;
 using System.Dynamic;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
+using Humanizer;
 
 namespace GameUnit
 {
@@ -11,6 +12,8 @@ namespace GameUnit
 
         //Health passou a ser virtual
         public virtual int Health { get; set; }
+
+        public abstract float Cost{get;}
 
         public Unit(int movement, int health)
         {
@@ -24,17 +27,20 @@ namespace GameUnit
         //Metodo Move
         private static void Move(int movement)
         {
-          movement = movement.Add(ToRoman);
-          Console.WriteLine($"Units moved { movement.Add(ToRoman)}"); 
+          
+          Console.WriteLine($"Units moved {movement.ToRoman()}"); 
               
         }
 
         //Propriedade Cost
-        public abstract float Cost()
-        {
-            get=>x=90;
-        }
         
+        
+      
+
+        public  string NewCost()  
+        {
+            return Cost.ToString()
+        }
         
       
         

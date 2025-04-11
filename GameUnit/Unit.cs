@@ -1,4 +1,7 @@
+using System;
+using System.Dynamic;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 
 namespace GameUnit
 {
@@ -19,22 +22,21 @@ namespace GameUnit
 
 
         //Metodo Move
-        private static void Move(string[] args)
+        private static void Move(int movement)
         {
-            /*int movement += 1;
-            //foreach(n in movement)
-            {
-                movement.Add(ToRoman());    
-            }
-            */
+          movement = movement.Add(ToRoman);
+          Console.WriteLine($"Units moved { movement.Add(ToRoman)}"); 
+              
         }
 
         //Propriedade Cost
-        public class Cost
+        public abstract float Cost()
         {
-           // public float X => 90;
+            get=>x=90;
         }
-
+        
+        
+      
         
 
 

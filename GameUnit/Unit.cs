@@ -6,7 +6,7 @@ using Humanizer;
 
 namespace GameUnit
 {
-    public class Unit
+    public abstract class Unit
     {
         private readonly int movement;
 
@@ -39,7 +39,7 @@ namespace GameUnit
 
         public  string NewCost()  
         {
-            return Cost.ToString()
+            return Cost.ToString();
         }
         
       
